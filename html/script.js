@@ -11,3 +11,15 @@ document.getElementById("discord-button").addEventListener("click", function () 
 
     document.body.removeChild(tempInput);
 });
+
+const backgroundMusic = document.getElementById("background-music");
+
+document.addEventListener("keydown", function (event) {
+    if (event.code === "Space") {
+        if (backgroundMusic.paused) {
+            backgroundMusic.play();
+        } else {
+            backgroundMusic.pause();
+        }
+    }
+});
